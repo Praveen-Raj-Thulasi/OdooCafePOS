@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Soft Light Mode Theme */
+  --bg-color: #eef2f6;
+  --card-bg: #ffffff;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  
+  /* Accents */
+  --accent-primary: #4f46e5; /* Vibrant Indigo/Blurple */
+  --accent-primary-hover: #4338ca;
+  --status-green: #10b981; /* Active/Positive */
+  --status-red: #ef4444; /* Vacant/Negative */
+  --status-orange: #f59e0b; /* Pending/Preparing */
+  
+  /* Neumorphic / Glass Shadows */
+  --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+  --shadow-float: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Utilities */
+.glass-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-float);
+}
+
+.pill-btn {
+  background-color: var(--accent-primary);
+  color: white;
+  border: none;
+  border-radius: 9999px; /* Pill shape */
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.pill-btn:hover {
+  background-color: var(--accent-primary-hover);
+}
+
+.pill-btn:active {
+  transform: scale(0.98);
+}
+
+/* Toast Animations */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.toast-success { border-left: 4px solid var(--status-green) !important; }
+.toast-warning { border-left: 4px solid var(--status-orange) !important; }
+.toast-info { border-left: 4px solid var(--accent-primary) !important; }
+
+/* Voice Assistant Animation */
+@keyframes pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+.pulse-dot {
+  animation: pulse 2s infinite;
+}
