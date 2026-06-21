@@ -1,34 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Montserrat:wght@300;400;500&display=swap');
 
 :root {
-  /* Premium Cafe Light Mode Theme */
-  --bg-color: #FDFBF7;
-  --card-bg: #FFFFFF;
-  --text-primary: #2C1E16;
-  --text-secondary: #8B7355;
-  --column-bg: rgba(235, 225, 216, 0.4);
+  /* Soft Light Mode Theme */
+  --bg-color: #eef2f6;
+  --card-bg: #ffffff;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --column-bg: rgba(255, 255, 255, 0.4);
   
-  --border-color: #EBE1D8;
-  --sub-bg: #F7EFE8;
-  --hover-bg: #F2EAE4;
-  --input-bg: #FFFFFF;
-  
-  /* Highlight colors matching the cafe aesthetic */
-  --highlight-blue: #F7EFE8; /* Warm latte froth */
-  --highlight-green: #E8F2EC; /* Soft matcha */
-  --border-blue: #DCA373; /* Caramel accent */
-  --border-green: #81A98E;
+  --border-color: #e5e7eb;
+  --sub-bg: #f9fafb;
+  --hover-bg: #f3f4f6;
+  --input-bg: #ffffff;
+  --highlight-blue: #eff6ff;
+  --highlight-green: #ecfdf5;
+  --border-blue: #bfdbfe;
+  --border-green: #a7f3d0;
   
   /* Accents */
-  --accent-primary: #C17A4D; /* Warm Terracotta / Caramel */
-  --accent-primary-hover: #A6653B;
-  --status-green: #598066; /* Elegant muted green */
-  --status-red: #B55A50; /* Muted brick red */
-  --status-orange: #D98C4A; /* Warm orange */
+  --accent-primary: #4f46e5; /* Vibrant Indigo/Blurple */
+  --accent-primary-hover: #4338ca;
+  --status-green: #10b981; /* Active/Positive */
+  --status-red: #ef4444; /* Vacant/Negative */
+  --status-orange: #f59e0b; /* Pending/Preparing */
   
   /* Neumorphic / Glass Shadows */
-  --shadow-soft: 0 10px 30px -5px rgba(139, 115, 85, 0.08), 0 8px 10px -6px rgba(139, 115, 85, 0.04);
-  --shadow-float: 0 20px 25px -5px rgba(139, 115, 85, 0.12), 0 10px 10px -5px rgba(139, 115, 85, 0.08);
+  --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+  --shadow-float: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 * {
@@ -38,41 +36,35 @@
 }
 
 body.dark {
-  /* Premium Dark Roast Theme */
-  --bg-color: #1A1513;
-  --card-bg: #241D1A;
-  --text-primary: #F2EAE4;
-  --text-secondary: #A8988C;
-  --column-bg: rgba(255, 255, 255, 0.03);
+  --bg-color: #121212;
+  --card-bg: #1e1e1e;
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --column-bg: rgba(255, 255, 255, 0.05);
   
-  --border-color: #3B312B;
-  --sub-bg: #1F1916;
-  --hover-bg: #322824;
-  --input-bg: #1F1916;
+  --border-color: #374151;
+  --sub-bg: #111827;
+  --hover-bg: #374151;
+  --input-bg: #1f2937;
+  --highlight-blue: rgba(59, 130, 246, 0.15);
+  --highlight-green: rgba(16, 185, 129, 0.15);
+  --border-blue: rgba(59, 130, 246, 0.25);
+  --border-green: rgba(16, 185, 129, 0.25);
   
-  --highlight-blue: rgba(193, 122, 77, 0.15);
-  --highlight-green: rgba(89, 128, 102, 0.15);
-  --border-blue: rgba(193, 122, 77, 0.3);
-  --border-green: rgba(89, 128, 102, 0.3);
-  
-  --shadow-soft: 0 10px 30px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
-  --shadow-float: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+  --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+  --shadow-float: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
 }
 
 body.dark .glass-card {
   border: 1px solid var(--border-color);
 }
 
+
 body {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
-}
-
-h1, h2, .logo-text {
-  font-family: 'Playfair Display', serif;
-  letter-spacing: -0.02em;
 }
 
 /* Utilities */
@@ -93,7 +85,7 @@ h1, h2, .logo-text {
   right: 0;
   bottom: 0;
   border-radius: inherit;
-  background: radial-gradient(circle at var(--mouse-x, -1000px) var(--mouse-y, -1000px), rgba(193, 122, 77, 0.18) 0%, rgba(139, 115, 85, 0.1) 40%, transparent 60%);
+  background: radial-gradient(circle at var(--mouse-x, -1000px) var(--mouse-y, -1000px), rgba(99, 102, 241, 0.18) 0%, rgba(236, 72, 153, 0.1) 40%, transparent 60%);
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
