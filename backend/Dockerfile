@@ -33,6 +33,7 @@ COPY package*.json ./
 # Copy application source code
 COPY server.js ./
 COPY registerMock.js ./
+COPY seeder.js seedMenu.js seedOrders.js seedHistory.js ./
 COPY config/ ./config/
 COPY controllers/ ./controllers/
 COPY middleware/ ./middleware/
