@@ -5,7 +5,8 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m'
 
-ECR_URL="649170435024.dkr.ecr.us-east-1.amazonaws.com/cafinity-backend"
+AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
+ECR_URL="${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com/cafinity-backend"
 
 echo -e "${YELLOW}Authenticating Docker with AWS ECR...${NC}"
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $ECR_URL
