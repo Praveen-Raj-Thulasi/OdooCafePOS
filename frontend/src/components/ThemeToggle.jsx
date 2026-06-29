@@ -9,6 +9,7 @@ const ThemeToggle = ({ isFloating = true }) => {
   useEffect(() => {
     if (location.pathname === '/login' || location.pathname === '/register') {
       document.body.classList.remove('dark');
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsDark(false);
       return;
     }

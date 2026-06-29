@@ -73,6 +73,7 @@ const ServantPortal = () => {
   };
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     fetchActiveTables();
     fetchPendingDeliveries();
 
@@ -121,7 +122,7 @@ const ServantPortal = () => {
       const res = await fetch(`${API_URL}/api/payments/bill/${table._id}`);
       if (res.ok) {
         const billData = await res.json();
-        if (billData.total > 0) {
+        if (billData.orders && billData.orders.length > 0) {
           setOpenBill(billData);
           setIsPaymentOpen(true);
         } else {

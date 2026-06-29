@@ -27,6 +27,7 @@ const VerificationAlerts = () => {
     // Only Admin and Cashier need to see these
     if (currentRole !== 'Admin' && currentRole !== 'Cashier') return;
 
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     fetchVerifications();
     
     if (!socket) return;

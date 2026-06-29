@@ -83,8 +83,8 @@ const createOrder = async (req, res) => {
       return await OrderItem.create({
         order: order._id,
         product: item.product || item._id,
-        quantity: item.qty || 1,
-        unitPrice: item.price || 0,
+        quantity: item.quantity || item.qty || 1,
+        unitPrice: item.unitPrice || item.price || 0,
         kdsStatus: requiresKDS ? 'ToCook' : 'NotRequired',
         isAlternativeAccepted: item.isAlternativeAccepted || false,
         waitSaved: item.waitSaved || 0
