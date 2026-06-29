@@ -38,7 +38,7 @@ const Register = () => {
       }
     } catch (err) {
       console.error('Registration error:', err);
-      setError('Cannot connect to backend server.');
+      setError(`Cannot connect to backend server at ${API_URL}`);
     }
   };
 
