@@ -182,7 +182,7 @@ const ServantPortal = () => {
           </div>
           <div>
             <h2 style={{ margin: 0, color: 'var(--text-primary)', fontSize: '1.25rem' }}>Servant Portal</h2>
-            <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Odoo Cafe Staff</span>
+            <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Cafinity Staff</span>
           </div>
         </div>
         

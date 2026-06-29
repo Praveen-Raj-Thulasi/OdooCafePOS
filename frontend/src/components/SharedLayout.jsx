@@ -54,7 +54,7 @@ const SharedLayout = () => {
       <aside className="glass-card" style={{ width: '250px', margin: '1rem', display: 'flex', flexDirection: 'column' }}>
         <div style={{ padding: '2rem 1.5rem', borderBottom: '1px solid rgba(0,0,0,0.05)' }}>
           <h2 style={{ margin: 0, color: 'var(--accent-primary)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            Odoo Cafe
+            Cafinity
             <Coffee size={24} strokeWidth={2.5} />
           </h2>
           <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', fontWeight: 600 }}>{currentRole} Workspace</span>

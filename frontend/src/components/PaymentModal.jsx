@@ -189,7 +189,7 @@ const PaymentModal = ({ isOpen, onClose, total, prePromoTotal = 0, automatedDisc
               <h3 style={{ margin: 0, color: 'var(--text-primary)' }}>Scan with any UPI App</h3>
               <div style={{ padding: '1rem', backgroundColor: 'var(--card-bg)', borderRadius: '15px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
                 <QRCodeSVG 
-                  value={`upi://pay?pa=7010496249@nyes&pn=OdooCafe&am=${finalTotal.toFixed(2)}&cu=INR`} 
+                  value={`upi://pay?pa=7010496249@nyes&pn=Cafinity&am=${finalTotal.toFixed(2)}&cu=INR`} 
                   size={200} 
                   level="H" 
                 />

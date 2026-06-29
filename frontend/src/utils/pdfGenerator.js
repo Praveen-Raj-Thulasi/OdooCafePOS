@@ -10,7 +10,7 @@ export const generateReceiptPDF = (billData) => {
   // Header
   doc.setFontSize(16);
   doc.setFont('helvetica', 'bold');
-  doc.text('Odoo Cafe', 40, 15, { align: 'center' });
+  doc.text('Cafinity', 40, 15, { align: 'center' });
   
   doc.setFontSize(10);
   doc.setFont('helvetica', 'normal');

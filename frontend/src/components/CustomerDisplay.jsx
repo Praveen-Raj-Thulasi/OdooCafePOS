@@ -45,8 +45,8 @@ const CustomerDisplay = () => {
   const displayTax = viewState === 'PAYMENT' && billDetails ? (billDetails.prePromoTotal / 1.1) * 0.1 : tax;
   const displayDiscount = viewState === 'PAYMENT' && billDetails ? billDetails.automatedDiscount : 0;
 
-  const upiId = "pay@odoocafe";
-  const upiName = "Odoo Cafe";
+  const upiId = "pay@cafinity";
+  const upiName = "Cafinity";
   const upiUrl = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(upiName)}&am=${displayTotal.toFixed(2)}&cu=INR`;
 
   return (
@@ -85,7 +85,7 @@ const CustomerDisplay = () => {
           <div style={{ padding: '2rem', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'linear-gradient(to right, rgba(255,255,255,0.02), transparent)' }}>
             <div>
               <h1 style={{ margin: 0, display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '1.8rem', fontWeight: 800, background: 'linear-gradient(to right, #818cf8, #c084fc)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                <Coffee size={32} color="#818cf8" /> Odoo Cafe
+                <Coffee size={32} color="#818cf8" /> Cafinity
               </h1>
               <p style={{ margin: '0.5rem 0 0 0', color: '#94a3b8', fontSize: '1rem', letterSpacing: '0.5px' }}>YOUR CURRENT ORDER</p>
             </div>

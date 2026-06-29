@@ -244,7 +244,7 @@ const CustomerMenu = () => {
 
       {/* Header */}
       <header style={{ padding: '1rem', backgroundColor: 'var(--card-bg)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxShadow: '0 2px 10px rgba(0,0,0,0.05)', zIndex: 10 }}>
-        <h1 style={{ margin: 0, color: 'var(--accent-primary)', fontSize: '1.5rem', fontWeight: 800 }}>Odoo Cafe</h1>
+        <h1 style={{ margin: 0, color: 'var(--accent-primary)', fontSize: '1.5rem', fontWeight: 800 }}>Cafinity</h1>
         {tableInfo && (
           <div style={{ fontSize: '0.8rem', fontWeight: 600, padding: '0.4rem 0.8rem', backgroundColor: tableInfo.isFull ? 'var(--status-red)' : 'var(--highlight-blue)', color: tableInfo.isFull ? '#fff' : 'var(--accent-primary)', borderRadius: '20px' }}>
             Table {tableInfo.tableNumber} • {tableInfo.activeCustomers}/{tableInfo.seats} Filled
@@ -486,7 +486,7 @@ const CustomerMenu = () => {
                 <h3 style={{ margin: 0, color: 'var(--text-primary)' }}>Scan with GPay, PhonePe, or Paytm</h3>
                 <div style={{ padding: '1rem', backgroundColor: 'var(--card-bg)', borderRadius: '15px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
                   <QRCodeSVG
-                    value={`upi://pay?pa=7010496249@nyes&pn=OdooCafe&am=${openTab.total.toFixed(2)}&cu=INR`}
+                    value={`upi://pay?pa=7010496249@nyes&pn=Cafinity&am=${openTab.total.toFixed(2)}&cu=INR`}
                     size={200}
                     level="H"
                   />

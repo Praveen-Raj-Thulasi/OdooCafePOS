@@ -63,7 +63,7 @@ const Login = () => {
             <Coffee size={72} color="white" />
           </div>
           <h1 style={{ fontFamily: '"Playfair Display", serif', fontSize: '4rem', fontWeight: 800, margin: '0 0 1rem 0', letterSpacing: '-1px', textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
-            Odoo Cafe
+            Cafinity
           </h1>
           <p style={{ fontFamily: '"Montserrat", sans-serif', fontSize: '1.35rem', lineHeight: '1.6', opacity: 0.95, margin: 0, textShadow: '0 2px 5px rgba(0,0,0,0.5)', fontWeight: 300 }}>
             Crafting the perfect blend of rich coffee and seamless digital experiences. Please sign in to access your station.

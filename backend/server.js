@@ -55,7 +55,7 @@ app.use('/api/sessions', sessionRoutes);
 
 // Base route
 app.get('/', (req, res) => {
-  res.send('Odoo Cafe POS API is running...');
+  res.send('Cafinity POS API is running...');
 });
 
 // Socket.io Connection

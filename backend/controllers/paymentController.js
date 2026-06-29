@@ -367,7 +367,7 @@ const sendReceiptEmail = async (req, res) => {
 
     const htmlContent = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
-        <h1 style="text-align: center; color: #18181b;">Odoo Cafe</h1>
+        <h1 style="text-align: center; color: #18181b;">Cafinity</h1>
         <h3 style="text-align: center; color: #71717a;">Payment Receipt</h3>
         <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;" />
         
@@ -396,9 +396,9 @@ const sendReceiptEmail = async (req, res) => {
     `;
 
     const info = await transporter.sendMail({
-      from: '"Odoo Cafe" <receipts@odoocafe.com>',
+      from: '"Cafinity" <receipts@cafinity.com>',
       to: email,
-      subject: "Your Receipt from Odoo Cafe",
+      subject: "Your Receipt from Cafinity",
       html: htmlContent,
     });
 

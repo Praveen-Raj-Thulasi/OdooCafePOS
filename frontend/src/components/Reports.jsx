@@ -125,7 +125,7 @@ const Reports = () => {
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
-    link.download = `Odoo_Report_${new Date().getTime()}.csv`;
+    link.download = `Cafinity_Report_${new Date().getTime()}.csv`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -138,7 +138,7 @@ const Reports = () => {
     
     // Header
     doc.setFontSize(20);
-    doc.text("Odoo Cafe - Sales Report", 14, 22);
+    doc.text("Cafinity - Sales Report", 14, 22);
     doc.setFontSize(11);
     doc.setTextColor(100);
     doc.text(`Period: ${reportType.toUpperCase()}`, 14, 30);
@@ -184,7 +184,7 @@ const Reports = () => {
       });
     }
 
-    doc.save(`Odoo_Dashboard_Report_${new Date().getTime()}.pdf`);
+    doc.save(`Cafinity_Dashboard_Report_${new Date().getTime()}.pdf`);
   };
 
   const { summary, salesTrend, topProducts, topCategories, topOrders } = dashboardData;

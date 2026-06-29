@@ -32,7 +32,7 @@ const QRGenerator = () => {
           boxShadow: '0 20px 40px rgba(0,0,0,0.1)'
         }}
       >
-        <h1 style={{ margin: '0 0 0.5rem 0', color: 'var(--accent-primary)', fontSize: '3rem' }}>Odoo Cafe</h1>
+        <h1 style={{ margin: '0 0 0.5rem 0', color: 'var(--accent-primary)', fontSize: '3rem' }}>Cafinity</h1>
         <p style={{ margin: '0 0 3rem 0', color: 'var(--text-secondary)', fontSize: '1.2rem' }}>Scan to order & pay</p>
         
         <div style={{ padding: '2rem', border: '4px solid var(--accent-primary)', borderRadius: '20px', display: 'inline-block' }}>
